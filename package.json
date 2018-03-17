@@ -9,12 +9,14 @@
   },
   "scripts": {
     "start": "node ./src/server.js",
-    "test": "mocha"
+    "test": "mocha",
+    "watch": "nodemon ./src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "4.16.2",
     "mocha": "^5.0.1"
   }
