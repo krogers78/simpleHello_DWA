@@ -10,7 +10,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/webhook', (req, res, next) => {
-  console.log('THIS IS A TEST', req.pullRequest);
+  console.log("THIS IS A TEST", req.pull_request.url);
   res.send('Got it.');
 });
 
