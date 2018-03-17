@@ -11,7 +11,7 @@ app.get('/', (req, res, next) => {
 
 app.post('/webhook', (req, res, next) => {
   const { author } = req.body;
-  console.log("test", req.body.author);
+  console.log("test", req.body);
   res.send('Page loaded successfully');
 });
 
