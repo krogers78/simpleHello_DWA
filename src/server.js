@@ -10,8 +10,9 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/webhook', (req, res, next) => {
-  const { creator } = req.body.deployment;
-  console.log(`${creator.login} is the owner of the owner of this repository`);
+  const { creator, environment, repository_url } = req.body.deployment;
+  console.log(`${creator.login} is the owner of the owner of the respository ${environment}.
+              \r\nThe repository is located at ${repository_url}.`);
   console.log('REQ BODY', req.body.deployment);
   res.send('Page loaded successfully');
 });
