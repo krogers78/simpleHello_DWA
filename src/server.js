@@ -11,7 +11,7 @@ app.get('/', (req, res, next) => {
 
 app.post('/webhook', (req, res, next) => {
   const { creator } = req.body.deployment_status;
-  console.log("TEST", creator);
+  console.log(`${creator.login} is the owner of the owner of this repository`);
   res.send('Page loaded successfully');
 });
 
