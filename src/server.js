@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -10,8 +10,8 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/webhook', (req, res, next) => {
-  console.log('I\'m testing', req.body);
-  res.send('Got it.');
+  console.log('I\'m testing', req.pullRequest.url);
+  res.send('Got it.', req.pullRequest.url);
 });
 
 app.listen(port, () => console.log(`Server active on port: ${port}`));
