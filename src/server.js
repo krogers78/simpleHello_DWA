@@ -10,8 +10,8 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/webhook', (req, res, next) => {
-  const { author } = req.body;
-  console.log("test", req.body.deployment_status);
+  const { creator } = req.body.deployment_status;
+  console.log("TEST", creator);
   res.send('Page loaded successfully');
 });
 
